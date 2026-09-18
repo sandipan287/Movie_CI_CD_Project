@@ -15,7 +15,8 @@ def test_movies_returns_list():
     data = response.get_json()
     assert isinstance(data, list)
     assert len(data) >= 5
-    assert all({"id", "title", "year", "genre"}.issubset(movie) for movie in data)
+    required_keys = {"id", "title", "year", "genre"}
+    assert all(required_keys.issubset(movie) for movie in data)
 
 
 def test_unknown_route_returns_404():
