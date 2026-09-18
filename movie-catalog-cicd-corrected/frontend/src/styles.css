@@ -1,0 +1,7 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #18212b; }
+.container { max-width: 1000px; margin: 0 auto; padding: 48px 24px; }
+header { margin-bottom: 32px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.card h2 { margin-top: 0; }
+.card span { font-weight: 700; }

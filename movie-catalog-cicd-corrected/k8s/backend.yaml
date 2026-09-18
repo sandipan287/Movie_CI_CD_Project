@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: movie-backend
+  template:
+    metadata:
+      labels:
+        app: movie-backend
+    spec:
+      containers:
+        - name: movie-backend
+          image: REPLACE_WITH_BACKEND_ECR_IMAGE
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movie-backend
+spec:
+  selector:
+    app: movie-backend
+  type: LoadBalancer
+  ports:
+    - port: 5000
+      targetPort: 5000
