@@ -12,13 +12,16 @@ MOVIES = [
     {"id": 5, "title": "Parasite", "year": 2019, "genre": "Thriller"},
 ]
 
+
 @app.get("/api/health")
 def health():
     return jsonify(status="ok")
 
+
 @app.get("/api/movies")
 def movies():
     return jsonify(MOVIES)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
