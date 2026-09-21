@@ -22,7 +22,7 @@
     "lint": "eslint src --ext .js,.jsx"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"],
+    "extends": ["react-app"],
     "plugins": ["react"],
     "rules": {"react/react-in-jsx-scope": "off"}
   },
